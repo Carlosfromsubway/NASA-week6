@@ -1,5 +1,8 @@
 import axios from "axios"
+import styles from '@/styles/Home.module.css'
+import styled from "styled-components"
 import { useEffect, useState } from "react"
+import NasaButton from "@/components/button"
 import Image from "next/image"
 export default function Polychromatic () {
 const [image, setImage] = useState([])
@@ -49,7 +52,7 @@ const getPolychromaticData = async () => {
         getPolychromaticData();
     },[])
     return (
-        <div>
+        <div className={styles.spacing}>
             <Image src={image} alt={image} width={200} height={120}/>
             <div>{time}</div>
             <div>{coords[0]}, {coords[1]}</div>
@@ -71,14 +74,14 @@ const getPolychromaticData = async () => {
                                         <td>{e.time}</td>
                                         <td>{e.coords.lat}</td>
                                         <td>{e.coords.lon}</td>
-                                        <td><Image src={e.image} alt={i} width={200} height={130}/></td>
+                                        <td><Image src={e.image} alt={i} width={180} height={130}/></td>
                                         <td>
-                                        <button onClick={() => {
+                                        <button  onClick={() => {
                                             setImage(e.image);
                                             setTime(e.time);
                                             setCoords(e.coords.lat, e.coords.lon);
                                             document.body.scrollIntoView();
-                                        }}>View here</button>
+                                        }}className={styles.NasaButton}></button>
                                         </td>
                                     </tr>
                                 )

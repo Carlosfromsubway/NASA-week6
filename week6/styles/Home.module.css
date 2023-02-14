@@ -7,6 +7,25 @@
   min-height: 100vh;
 }
 
+/* polychromatic styling*/
+.NasaButton {
+  width: 200px;
+height: 40px;
+background-color: transparent;
+border: solid 1px;
+color: white;
+border-color: #3A9BDC;
+
+font-size: 20px
+
+}
+
+.spacing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
