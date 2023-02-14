@@ -71,18 +71,22 @@ const getPolychromaticData = async () => {
                             images.map((e, i) => {
                                 return(
                                     <tr key={i}>
+                                        <div className={styles.row}> 
                                         <td>{e.time}</td>
                                         <td>{e.coords.lat}</td>
                                         <td>{e.coords.lon}</td>
                                         <td><Image src={e.image} alt={i} width={180} height={130}/></td>
+                                        </div>
+                                        <div className={styles.spacing}> 
                                         <td>
                                         <button  onClick={() => {
                                             setImage(e.image);
                                             setTime(e.time);
                                             setCoords(e.coords.lat, e.coords.lon);
                                             document.body.scrollIntoView();
-                                        }}className={styles.NasaButton}></button>
+                                        }}className={styles.NasaButton}> View Here</button>
                                         </td>
+                                        </div>
                                     </tr>
                                 )
                             })
