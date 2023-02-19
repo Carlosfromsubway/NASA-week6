@@ -52,8 +52,10 @@ const getPolychromaticData = async () => {
         getPolychromaticData();
     },[])
     return (
+        <main className={styles.main}> 
+        <div className={styles.tidy}>
         <div className={styles.spacing}>
-            <Image src={image} alt={image} width={200} height={120}/>
+            <Image src={image} alt={image}  className={styles.bigimage}/>
             <div>{time}</div>
             <div>{coords[0]}, {coords[1]}</div>
 
@@ -75,7 +77,7 @@ const getPolychromaticData = async () => {
                                         <td>{e.time}</td>
                                         <td>{e.coords.lat}</td>
                                         <td>{e.coords.lon}</td>
-                                        <td><Image src={e.image} alt={i} width={180} height={130}/></td>
+                                        <td><Image src={e.image} alt={i} width={180} height={150} className={styles.earth}/></td>
                                         </div>
                                         <div className={styles.spacing}> 
                                         <td>
@@ -94,5 +96,7 @@ const getPolychromaticData = async () => {
                     </tbody>
             </table>
         </div>
+        </div>
+        </main>
     )
 }

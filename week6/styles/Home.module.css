@@ -1,25 +1,81 @@
 .main {
   display: flex;
-  flex-direction: column;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 6rem;
+  min-height: 100vh;
+  background-image: url(../public/space.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 120%;
+
+}
+
+.tidy {
+  flex-wrap: wrap;
+  
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  min-height: 100vh;
 }
-
 /* polychromatic styling*/
 .NasaButton {
-  width: 150px;
+width: 150px;
 height: 40px;
 background-color: transparent;
 border: solid 1px;
 color: white;
 border-color: #3A9BDC;
-
+margin-bottom: -400px;
 font-size: 20px
 
 }
 
+.Title {
+  font-size: 38px;
+  font-weight: bold;
+
+  color: aliceblue;
+}
+
+
+.space {
+  
+  width: 290px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 20px;
+  border: 15px solid rgb(0, 16, 95);
+  border-radius: 5px;
+  aspect-ratio: 1;
+  flex-wrap: wrap;
+  flex: 2 2 80px;
+  margin-top: 90px;
+  justify-content: space-between;
+
+}
+
+.earth {
+  margin: 15px;
+  margin-right: 800px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 20px;
+  border: 15px solid rgb(0, 16, 95);
+  border-radius: 10px;
+
+  justify-content: space-between;
+
+}
+
+.bigimage {
+  justify-content: center;
+  width: 300px;
+  height: 220px;
+}
 .row {
   display: flex;
   flex-direction: row;

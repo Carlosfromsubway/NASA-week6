@@ -31,7 +31,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Link href="/polychromatic">polychromatic</Link>
+        <Link href="/polychromatic" className={styles.Title}>polychromatic</Link>
+        <div className={styles.tidy}>
       {
         data && data.results.map((tech, index) => {
           return (
@@ -43,8 +44,9 @@ export default function Home() {
                         <Image src={t}
                         alt={t}
                         key={ind}
-                        width={100}
-                        height={100}
+                        width={200}
+                        height={200}
+                        className={styles.space}
                         />
                       )
                     }
@@ -54,6 +56,7 @@ export default function Home() {
           )
         })
       }
+      </div>
       </main>
     </>
   )
