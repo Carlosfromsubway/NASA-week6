@@ -9,8 +9,8 @@ import { useEffect, useState } from 'react'
 export default function Home() {
   const [data, setData] = useState();
 
- var name = process.env.NEXT_PUBLIC_NAME;
-  const apiKey = "Rl653lAZk7HZOIe9EtUJqurVaIIl92bBbWab90su";
+ 
+  let apiKey = process.env.NEXT_PUBLIC_APIKEY;
   const url = `https://api.nasa.gov/techtransfer/patent/?q=10&engine&api_key=${apiKey}`
   const getTechTransferData = async () => {
     const res = await axios.get(url)
@@ -53,7 +53,7 @@ export default function Home() {
                     }
                   })
                 }
-                {name}
+                
             </div>
           )
         })

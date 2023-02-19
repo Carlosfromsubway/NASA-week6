@@ -10,7 +10,7 @@ const [images, setImages] = useState([]);
 const [time, setTime] = useState("loading");
 const [date, setDate] = useState("");
 const [coords, setCoords] = useState({});
-const apiKey = "Rl653lAZk7HZOIe9EtUJqurVaIIl92bBbWab90su";
+let apiKey = process.env.NEXT_PUBLIC_APIKEY;
 const url = `https://epic.gsfc.nasa.gov/api/natural?api_key=${apiKey}`
 
 const getPolychromaticData = async () => {
