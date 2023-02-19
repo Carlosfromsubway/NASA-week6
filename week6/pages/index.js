@@ -41,6 +41,7 @@ export default function Home() {
                   tech && tech.map((t, ind) => {
                     if(ind ===10){
                       return (
+                        
                         <Image src={t}
                         alt={t}
                         key={ind}
