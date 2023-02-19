@@ -53,7 +53,7 @@ const getPolychromaticData = async () => {
     },[])
     return (
         <main className={styles.main}> 
-        <div className={styles.tidy}>
+        
         <div className={styles.spacing}>
             <Image src={image} alt={image}  width={180} height={150} className={styles.bigimage}/>
             <div>{time}</div>
@@ -72,8 +72,10 @@ const getPolychromaticData = async () => {
                         {
                             images.map((e, i) => {
                                 return(
+                                    
                                     <tr key={i}>
-                                        <div className={styles.row}> 
+                                        <div className={styles.tidy}>
+                                        
                                         <td>{e.time}</td>
                                         <td>{e.coords.lat}</td>
                                         <td>{e.coords.lon}</td>
@@ -89,6 +91,7 @@ const getPolychromaticData = async () => {
                                         }}className={styles.NasaButton}> View Here</button>
                                         </td>
                                         </div>
+                                        
                                     </tr>
                                 )
                             })
@@ -96,7 +99,7 @@ const getPolychromaticData = async () => {
                     </tbody>
             </table>
         </div>
-        </div>
+        
         </main>
     )
 }
