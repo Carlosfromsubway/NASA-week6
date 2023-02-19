@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 export default function Home() {
   const [data, setData] = useState();
 
- 
+ var name = process.env.NEXT_PUBLIC_NAME;
   const apiKey = "Rl653lAZk7HZOIe9EtUJqurVaIIl92bBbWab90su";
   const url = `https://api.nasa.gov/techtransfer/patent/?q=10&engine&api_key=${apiKey}`
   const getTechTransferData = async () => {
@@ -52,6 +52,7 @@ export default function Home() {
                     }
                   })
                 }
+                {name}
             </div>
           )
         })

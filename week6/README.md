@@ -1,6 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Applicaion is made with:
 
-## Getting Started
+Next.js 13
+javascript
+css
+html
+axios
+
+Decription:
+project uses api keys that display the earth at different points in its rotation periods.
+
+instalations used:
+
+npx create-next-app
+
+npm install axios
+
+npm install styled-components
 
 First, run the development server:
 
