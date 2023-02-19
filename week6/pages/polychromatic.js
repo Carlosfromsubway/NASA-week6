@@ -55,7 +55,7 @@ const getPolychromaticData = async () => {
         <main className={styles.main}> 
         <div className={styles.tidy}>
         <div className={styles.spacing}>
-            <Image src={image} alt={image}  className={styles.bigimage}/>
+            <Image src={image} alt={image}  width={180} height={150} className={styles.bigimage}/>
             <div>{time}</div>
             <div>{coords[0]}, {coords[1]}</div>
 
